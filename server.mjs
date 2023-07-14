@@ -7,7 +7,7 @@ import { createProxyMiddleware } from 'http-proxy-middleware';
 const app = express();
 
 app.use(
-    '/app',
+    env.SYSTEM_ADMIT_ROOT,
     createProxyMiddleware({
         target: env.SYSTEM_ADMIN_BASE,
     })
